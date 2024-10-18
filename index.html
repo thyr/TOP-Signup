@@ -1,27 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up on Replicant Cooperative</title>
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="container-left">
-        <div id="banner"><img src="" alt="RepliCo" srcset=""></div>
-        <div id="bg-footer">Photo by ____</div>
+      <div id="banner">
+        <img src="./img/Penrose.svg" alt="RepliCo" />
+        <p class="bannertext">RepliCo</p>
+      </div>
+      <div id="footer">
+        Designed by
+        <a href="https://github.com/thyr"
+          ><span class="highlight">Maybe a Replicant</span></a
+        >
+        for <span class="highlight">The Odin Project</span>
+      </div>
     </div>
     <div id="container-right">
-        <div id="signup-attract"><p>WHAT ARE YOU FUCKING WAITING FOR?</p><p>SIGN UP ALREADY, YOU FUCKING DIMWIT</p></div>
-        <form action="httpbin.org/post" method="post" id="signup-form">
-            <p>Let's do this!</p>
-        </form>
-        <div id="signup-submit">
-            <button type="submit" form="signup-form">LET'S GO</button>
-            <p id="login">Already a member? <a href="./login.html">Log in</a></p>
+      <div id="signup-attract">
+        <p>WHAT ARE YOU FUCKING WAITING FOR?</p>
+        <p>SIGN UP ALREADY, YOU FUCKING DIMWIT</p>
+      </div>
+      <form action="httpbin.org/post" method="post" id="signup-form">
+        <p>Let's do this!</p>
+        <div class="form-field">
+          <label for="user_name">FIRST NAME</label
+          ><input type="text" name="user_name" id="user_name" required/>
         </div>
+        <div class="form-field">
+          <label for="user_surname">LAST NAME</label
+          ><input type="text" name="user_surname" id="user_surname" required/>
+        </div>
+        <div class="form-field">
+          <label for="user_email">EMAIL</label
+          ><input type="email" name="user_email" id="user_email" required/>
+        </div>
+        <div class="form-field">
+          <label for="user_phone">PHONE NUMBER</label><input type="tel" name="user_phone" id="user_phone" required/>
+        </div>
+        <div class="form-field">
+          <label for="user_pass">PASSWORD</label><input type="password" name="user_pass" id="user_pass" required/>
+        </div>
+        <div class="form-field">
+          <label for="user_pass_confirm">REPEAT PASSWORD</label><input type="password" id="user_pass_confirm" required/>
+        </div>
+      </form>
+      <div id="signup-submit">
+        <button type="submit" form="signup-form">LET'S GO</button>
+        <p id="login">Already a member? <a href="./login.html">Log in</a></p>
+      </div>
     </div>
-</body>
+  </body>
 </html>
